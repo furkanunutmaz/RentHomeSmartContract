@@ -1,28 +1,21 @@
-REMIX DEFAULT WORKSPACE
+[EN]
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+Home-Room Rental Smart Contract
 
-This workspace contains 3 directories:
+1. Customers register with the AddCustomer function. As a result, each customer gets an ID.
+2. Homeowners register homes with the AddHome function. As a result, each house has an ID.
+3. Using the CreateRent function, the customer enters the house ID he wants to rent using his own ID. In addition, he enters how long he wants to rent.
+4. The balance equal to the value of the house is deducted from the customer's balance and goes to the owner's balance.
+5. In return, NFT is given to the customer using the ERC-721 standard.
+6. This NFT is valid for as long as the user wishes. During this period, NFT cannot be burned by anyone.
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+[TR]
 
-SCRIPTS
+Ev-Oda Kiralama Akıllı Kontratı
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
-
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
-
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
-
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
-
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+1. Müşteriler AddCustomer fonksiyonu ile sisteme kayıt oluyor. Bunun sonucunda her müşteri bir ID'ye sahip oluyor.
+2. Ev sahipleri evleri AddHome fonksiyonu ile sisteme kaydediyor. Bunun sonucunda her evin bir ID'si sahip oluyor.
+3. Müşteri CreateRent fonksiyonunu kullanarak kendi ID'sini kullanarak hangi evi kiralamak istiyorsa ev ID'sini giriyor. Ek olarak ne kadar süre kiralamak istediğini de giriyor.
+4. Evin değeri kadar bakiye müşterinin bakiyesinden düşüyor ev sahibinin bakiyesine gidiyor. 
+5. Bunun karşılığında müşteriye ERC-721 standartı kullanılarak NFT veriliyor.
+6. Bu NFT kullanıcının istediği süre kadar geçerli oluyor. Bu süre aralığında NFT kimse tarafından burn edilemiyor.
